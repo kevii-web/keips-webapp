@@ -23,29 +23,31 @@
 
 <body>
   <h1><%= title %></h1>
-  <p>Welcome to <%= title %></p>
-  <div>Please enter your information according to the instructions:
-    <br />If matric is A0168088L, nusnet is E0185520, enter input as :
+  <h4>
+    Hi <%= object.name %> (<%= object.gender %>)
+    <br />
+    <%= magicNum %>
+  </h4>
+  <div class="container-fluid">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">CCA</th>
+          <th scope="col">Category</th>
+          <th scope="col">Attendance Points</th>
+          <th scope="col">Total Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% var ccaList = object.ccaList; for (var i = 0; i < ccaList.length; i++) { %>
+        <tr>
+          <td><%= ccaList[i].name %></td>
+          <td><%= ccaList[i].category %></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
   </div>
-  <form action="points" onsubmit="return validateForm();" method="POST">
-    <div>
-      <label for="matricNet">Matric + NUSNET</label>
-      <input type="text" id="matricNet" name="magicNet" placeholder="A0165517">
-    </div>
-    <button type="submit">Get my points!</button>
-
-  </form>
-  <script type="text/javascript">
-    function validateForm() {
-      var input = document.getElementById("matricNet").value;
-      console.log(input);
-      if (input == "" || input.length < 5) {
-        alert("Too little characters");
-        return false;
-      }
-      return true;
-    }
-  </script>
 
 </body>
 
