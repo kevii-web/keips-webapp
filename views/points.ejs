@@ -35,6 +35,8 @@
           <th scope="col">CCA</th>
           <th scope="col">Category</th>
           <th scope="col">Attendance Points</th>
+          <th scope="col">Performance Points</th>
+          <th scope="col">Outstanding Points</th>
           <th scope="col">Total Points</th>
         </tr>
       </thead>
@@ -43,6 +45,10 @@
         <tr>
           <td><%= ccaList[i].name %></td>
           <td><%= ccaList[i].category %></td>
+          <td><%= ccaList[i].attendancePoints %></td>
+          <td><%= ccaList[i].performancePoints %></td>
+          <td><%= ccaList[i].outstandingPoints %></td>
+          <td><%= ccaList[i].totalPoints %></td>
         </tr>
         <% } %>
       </tbody>
