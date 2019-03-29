@@ -22,20 +22,24 @@
 </head>
 
 <body>
-  <h1><%= title %></h1>
-  <p>Welcome to <%= title %></p>
-  <div>Please enter your information according to the instructions:
-    <br />Combine the last 4 characters of your NUSNET ID and Matriculation Number together.
-    <br />For e.g. If Matric is A0168088L, NUSNET is E0185520, enter input as 5520088L
+  <div class="container">
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %> Webpage</p>
+    <p>Please enter your information according to the instructions:
+      <br /> - Combine the last 4 characters of your NUSNET ID and Matriculation Number together.
+      <br /> - For e.g. If Matric is A0168088L, NUSNET is E0185520, enter input as 5520088L
+    </p>
+    <form action="points" onsubmit="return validateForm();" method="POST">
+      <div class="mx-auto">
+        <div class="form-group">
+          <label for="matricNet">Matric + NUSNET</label>
+          <input autofocus type="text" id="matricNet" name="magicNet" placeholder="5619078N">
+        </div>
+        <button class="btn btn-primary" type="submit">Get my points!</button>
+      </div>
+    </form>
   </div>
-  <form action="points" onsubmit="return validateForm();" method="POST">
-    <div>
-      <label for="matricNet">Matric + NUSNET</label>
-      <input type="text" id="matricNet" name="magicNet" placeholder="A0165517">
-    </div>
-    <button type="submit">Get my points!</button>
 
-  </form>
   <script type="text/javascript">
     function validateForm() {
       var input = document.getElementById("matricNet").value;
@@ -47,7 +51,6 @@
       return true;
     }
   </script>
-
 </body>
 
 </html>
