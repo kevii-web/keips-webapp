@@ -25,8 +25,13 @@ router.post('/', function (req, res, next) {
     if (snapshot.exists()) {
       var stuObject = {
         name: snapshot.child("name").val(),
+        ranking: snapshot.child("name").val(),
+        osaPoints: 0,
+        roomDrawPoints: 0,
+        semester: snapshot.child("semester"),
         gender: snapshot.child("gender").val(),
         ccaList: snapshot.child("ccaList").val(),
+        bonusCcaList: snapshot.child("bonusCcaList").val(),
       }
       console.log(stuObject);
       res.render('points', { title: 'Points', magicNum: magicNum, object: stuObject });
