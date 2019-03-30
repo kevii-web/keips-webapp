@@ -27,10 +27,11 @@ router.post('/', function (req, res, next) {
         name: snapshot.child("name").val(),
         ranking: snapshot.child("ranking").val(),
         osaPoints: snapshot.child("osaPointsCount").val(),
-        roomDrawPoints: snapshot.child("roomDrawPoints").val(),
+        roomDrawPoints: snapshot.child("newRoomDrawPoints").val(),
         gender: snapshot.child("gender").val(),
         ccaList: snapshot.child("ccaList").val(),
         bonusCcaList: snapshot.child("bonusCcaList").val(),
+        percentile: Math.round(snapshot.child("percentile").val() * 100) / 100,
       }
       const semester = snapshot.child("semester").val();
       if (semester == 1) {

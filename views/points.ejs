@@ -29,13 +29,27 @@
       <br />
       <%= magicNum %>
       <br />
-      Semesters stayed: <%= object.semesterCount %> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Contrasting CCAs? <%= object.haveContrasting %>
+      Semesters stayed: <%= object.semesterCount %> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Contrasting CCAs?
+      <%= object.haveContrasting %>
     </h4>
   </div>
   <div class="container-fluid">
-    <h5>OSA Points: <%= object.osaPoints %></h5>
-    <h5>Room Draw Points: <%= object.roomDrawPoints %></h5>
-    <h5>Ranking: <%= object.ranking %></h5>
+    <div class="row">
+      <div class="col-sm-3">
+        <h5>OSA Points: <%= object.osaPoints %></h5>
+      </div>
+      <div class="col-sm">
+        <h5>Room Draw Points: <%= object.roomDrawPoints %></h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <h5>Ranking: <%= object.ranking %></h5>
+      </div>
+      <div class="col-sm">
+        <h5>Percentile: <%= object.percentile %></h5>
+      </div>
+    </div>
   </div>
   <div class="container-fluid">
     <span>CCA Points Breakdown</span>
