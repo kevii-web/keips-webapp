@@ -38,6 +38,11 @@ router.post('/', function (req, res, next) {
       } else if (semester == 2) {
         stuObject.semesterCount = 2;
       }
+      
+      const contrastingCCA = snapshot.child("haveContrasting").val();
+      contrastingCCA ? stuObject.haveContrasting = "Yes" :
+            stuObject.haveContrasting = "No";
+
       console.log(stuObject);
       res.render('points', { title: 'Points', magicNum: magicNum, object: stuObject });
     } else {

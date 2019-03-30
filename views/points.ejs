@@ -23,11 +23,13 @@
 
 <body>
   <div class="container-fluid">
-    <h2><%= title %></h2>
+    <h1><%= title %></h1>
     <h4>
       Hi <%= object.name %> (<%= object.gender %>)
       <br />
-      <%= magicNum %> Semesters stayed: <%= object.semesterCount %>
+      <%= magicNum %>
+      <br />
+      Semesters stayed: <%= object.semesterCount %> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Contrasting CCAs? <%= object.haveContrasting %>
     </h4>
   </div>
   <div class="container-fluid">
