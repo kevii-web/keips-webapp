@@ -26,14 +26,13 @@ router.post('/', function (req, res, next) {
       var stuObject = {
         name: snapshot.child("name").val(),
         ranking: snapshot.child("ranking").val(),
-        osaPoints: snapshot.child("osaPoints").val(),
+        osaPoints: snapshot.child("osaPointsCount").val(),
         roomDrawPoints: snapshot.child("roomDrawPoints").val(),
-        
         gender: snapshot.child("gender").val(),
         ccaList: snapshot.child("ccaList").val(),
         bonusCcaList: snapshot.child("bonusCcaList").val(),
       }
-      const semester = snapshot.child("semester");
+      const semester = snapshot.child("semester").val();
       if (semester == 1) {
         stuObject.semesterCount = 2;
       } else if (semester == 2) {
