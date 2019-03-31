@@ -44,7 +44,7 @@ router.post('/', function (req, res, next) {
       contrastingCCA ? stuObject.haveContrasting = "Yes" :
             stuObject.haveContrasting = "No";
 
-      console.log(stuObject);
+      console.log(stuObject.name);
       res.render('points', { title: 'Points', magicNum: magicNum, object: stuObject });
     } else {
       //req.flash('msg', 'Entered incorrectly!');
