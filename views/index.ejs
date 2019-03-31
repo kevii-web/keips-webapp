@@ -44,8 +44,8 @@
     function validateForm() {
       var input = document.getElementById("matricNet").value;
       console.log(input);
-      if (input == "" || input.length < 5) {
-        alert("Too little characters");
+      if (input == "" || input.length != 8) {
+        alert("Oi type 8 characters lah");
         return false;
       }
       return true;
