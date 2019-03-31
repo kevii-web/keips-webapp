@@ -96,7 +96,8 @@
         </tr>
       </thead>
       <tbody>
-        <% var ccaList = object.ccaList; for (var i = 0; i < ccaList.length; i++) { %>
+        <% var ccaList = object.ccaList; if (ccaList != null) {
+          for (var i = 0; i < ccaList.length; i++) { %>
         <tr>
           <td><%= ccaList[i].name %></td>
           <% if (ccaList[i].category == "Admin") { %>
@@ -109,7 +110,7 @@
           <td><%= ccaList[i].outstandingPoints %></td>
           <td><%= ccaList[i].totalPoints %></td>
         </tr>
-        <% } %>
+        <% }} %>
       </tbody>
     </table>
   </div>

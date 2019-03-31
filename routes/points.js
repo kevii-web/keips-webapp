@@ -45,6 +45,7 @@ router.post('/', function (req, res, next) {
             stuObject.haveContrasting = "No";
 
       console.log(stuObject.name);
+      console.log(stuObject.osaPoints);
       res.render('points', { title: 'Points', magicNum: magicNum, object: stuObject });
     } else {
       //req.flash('msg', 'Entered incorrectly!');

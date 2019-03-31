@@ -26,13 +26,13 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %> Webpage</p>
     <p>Please enter your information according to the instructions:
-      <br /> - Combine the last 4 characters of your NUSNET ID and Matriculation Number together.
-      <br /> - For e.g. If Matric is A0168088L, NUSNET is E0185520, enter input as 5520088L
+      <br /> - Combine the <STRONG>LAST 4 CHARACTERS</STRONG> of your NUSNET ID and Matriculation Number together.
+      <br /> - For e.g. If Matric is A0000000Z, NUSNET is E9999999, enter input as 9999000Z
     </p>
     <form action="points" onsubmit="return validateForm();" method="POST">
       <div class="mx-auto">
         <div class="form-group">
-          <label for="matricNet">Matric + NUSNET</label>
+          <label for="matricNet">NUSNET + Matric</label>
           <input autofocus type="text" id="matricNet" name="magicNet" placeholder="5619078N">
         </div>
         <button class="btn btn-primary" type="submit">Get my points!</button>
