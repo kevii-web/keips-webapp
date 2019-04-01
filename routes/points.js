@@ -37,7 +37,7 @@ router.post('/', function (req, res, next) {
       if (semester == 1) {
         stuObject.semesterCount = 2;
       } else if (semester == 2) {
-        stuObject.semesterCount = 2;
+        stuObject.semesterCount = 1;
       }
       
       const contrastingCCA = snapshot.child("haveContrasting").val();

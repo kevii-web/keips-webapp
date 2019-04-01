@@ -42,13 +42,19 @@
       <br />
       <%= magicNum %>
       <br />
-      Semesters stayed: <%= object.semesterCount %> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Contrasting CCAs?
-      <%= object.haveContrasting %>
     </h4>
+    <div class="row">
+      <div class="col-sm-4">
+        <h5>Semesters stayed: <%= object.semesterCount %></h5>
+      </div>
+      <div class="col-sm">
+        <h5>Contrasting CCAs? <%= object.haveContrasting %></h5>
+      </div>
+    </div>
   </div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <h5>OSA Points: <%= object.osaPoints %></h5>
       </div>
       <div class="col-sm">
