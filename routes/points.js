@@ -43,10 +43,14 @@ router.post('/', function (req, res, next) {
       const contrastingCCA = snapshot.child("haveContrasting").val();
       contrastingCCA ? stuObject.haveContrasting = "Yes" :
             stuObject.haveContrasting = "No";
+      let hallSlut = false;
+      if (snapshot.child("hallslut").exists()) {
+        hallSlut = true;
+      }
 
       console.log(stuObject.name);
       console.log(stuObject.osaPoints);
-      res.render('points', { title: 'Points', magicNum: magicNum, object: stuObject });
+      res.render('points', { title: 'Points', magicNum: magicNum, object: stuObject, hallSlut: hallSlut });
     } else {
       //req.flash('msg', 'Entered incorrectly!');
       res.redirect('/');
